@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.header{
+    position: absolute;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+.header .logo h2{
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.header .navbar a{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 15px;
+    padding: 8px;
+    border-radius: 3px;
+    
+}
+
+#menu-bar{
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.header .navbar a:hover{
+    color: #fff;
+    background-color: #0000ff;
+}
+
+.images{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.images:nth-child(1){
+    background: url("./images/bg-1.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.images:nth-child(2){
+    background: url("./images/bg-2.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.images:nth-child(3){
+    background: url("./images/bg-3.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.content{
+    width: 450px;
+    height: 230px;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 13px rgba(0,0,0,0.3);
+    text-shadow: 0 0 13px gray ;
+}
+
+/* media queries */
+@media (max-width:768px){
+    #menu-bar{
+        display: initial;
+    }
+    
+    .header .navbar{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 10px 20px;
+        display: none;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+
+    .header .navbar.active{
+        display: block;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .navbar a{
+        font-size: 25px;
+        display: block;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px 15px;
+        margin: 10px 0;
+        
+    }
+    
+}
